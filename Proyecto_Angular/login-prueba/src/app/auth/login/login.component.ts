@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm=this.formBuilder.group({
-    email:['',[Validators.required, Validators.email]],
+    nit:['',[Validators.required]],
+    num:['',[Validators.required]],
     password:['',[Validators.required]]
   }) 
   constructor(private formBuilder:FormBuilder, private router:Router) { }
@@ -17,8 +18,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get email(){
-    return this.loginForm.controls.email;
+  get nit(){
+    return this.loginForm.controls.nit;
+  }
+
+  get num(){
+    return this.loginForm.controls.num;
   }
 
   get password()

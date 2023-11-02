@@ -1,20 +1,27 @@
 <form [formGroup]="loginForm">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+      <label for="InputNit1" class="form-label">Nit</label>
+      <input type="nit" class="form-control" id="InputNit1" aria-describedby="nitHelp">
+        <div *ngIf="nit.invalid && (nit.dirty || nit.touched)"
             class="text-danger">
-            <div *ngIf="email.errors?.['required']">
-                El Email es requerido.
-            </div>
-            <div *ngIf="email.errors?.['email']">
-                El Email debe tener un formato válido.
+            <div *ngIf="nit.errors?.['required']">
+                El Nit es requerido.
             </div>
         </div>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="InputNum1" class="form-label">Num Identificacion</label>
+        <input type="num" class="form-control" id="InputNum1" aria-describedby="numHelp">
+          <div *ngIf="num.invalid && (num.dirty || num.touched)"
+              class="text-danger">
+              <div *ngIf="num.errors?.['required']">
+                  El Numero de Identificacion es requerido.
+              </div>
+          </div>
+      </div>
+    <div class="mb-3">
+      <label for="InputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="InputPassword1">
       <div *ngIf="password.invalid && (password.dirty || password.touched)"
             class="text-danger">
             <div *ngIf="password.errors?.['required']">
